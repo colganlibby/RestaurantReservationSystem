@@ -1,53 +1,58 @@
 # 🍽️ Restaurant Reservation & Ordering System
 
-A full-stack restaurant management web application developed as part of my **Advanced Web Programming** module at Cardiff Metropolitan University. This system enables customers to browse menus, reserve tables, order food, apply discount codes, and securely pay using Stripe. Staff and admin users have dedicated dashboards to manage orders, bookings, and content in real time.
+A full-stack restaurant management web application built as part of my **Advanced Web Programming** module at Cardiff Metropolitan University. It allows customers to browse the menu, reserve tables, order food, apply discount codes, and pay securely via Stripe. Staff and admin users have their own dashboards to manage orders, reservations, and system activity.
 
 ---
 
-## 🎯 Project Overview
+## 🎓 University Project Details
 
-This was created as a **graded university assignment** focused on applying real-world full-stack development techniques. Emphasis was placed on usability, security, and modular structure — delivering a practical solution that reflects how a restaurant could operate online.
+- 📚 **Module**: Advanced Web Programming (CIS6028)  
+- 🏫 **Institution**: Cardiff Metropolitan University  
+- 📅 **Submitted**: May 2025  
+- 🎯 **Grade-Aim**: Applied real-world full-stack practices with a focus on usability, security and modularity
 
 ---
 
-## 💻 Features
+## 💻 Key Features
 
-### 👤 Customer
-- Register / log in with secure authentication
-- Browse a dynamic menu pulled from the database
-- Add items to a cart (with quantity & promo code support)
-- Reserve tables with server-side time slot validation
-- Pay securely through Stripe Checkout
-- Receive email + on-screen confirmations
-- View current and past reservations
+### 👤 Customers
+- Register and log in securely
+- Browse and filter menu items
+- Add items to cart with quantity and discount codes
+- Reserve tables with time validation
+- Pay using Stripe Checkout (secure, PCI-compliant)
+- Receive email and on-screen booking confirmations
 
 ### 🛠️ Admin & Staff
 - Admin dashboard with:
-  - Menu management (Add/Edit/Delete)
-  - Reservation tracking & cancellation
-  - Sales reporting (total income, orders)
-  - Admin logs with timestamped activities
-- Staff dashboard to:
-  - View customer orders
-  - Update order statuses
+  - Menu item management (Add/Edit/Delete)
+  - Reservation tracking and cancellation
+  - View payment & order logs
+  - Admin action logs with timestamps
+- Staff dashboard:
+  - View and update customer order statuses
 
 ---
 
-## 🧰 Tech Stack
+## 🔐 Security Highlights
 
-- **Frontend:** HTML, CSS
-- **Backend:** PHP
-- **Database:** MySQL
-- **Payment Processing:** Stripe Checkout API
-- **Security:** Session handling, password hashing, role-based access control
+- Passwords hashed using `password_hash()`  
+- Prepared statements to prevent SQL injection  
+- Role-based access control for Admin, Staff, and Customers  
+- Stripe Checkout ensures secure payments without storing card data  
+- All admin actions logged for transparency
 
 ---
 
-## 📁 Folder Structure
-├── admin/ # Admin-only tools
-├── customer/ # Customer dashboard, cart & bookings
-├── staff/ # Staff-facing order updates
-├── includes/ # Shared PHP functions & DB connection
-├── payments/ # Stripe API integration
-├── index.php # Landing/Login page
-└── db.sql # Database schema
+## 📸 Screenshots
+
+| Customer Cart | Stripe Checkout | Admin Menu Manager |
+|--------------------|------------------|---------------------|
+| ![Customer Dashboard](pic5.png) | ![Stripe Checkout](pic6.png) | ![Admin Menu](pic8.png) |
+
+## 🛠 Future Enhancements
+
+- Mobile responsiveness  
+- SMS/email webhooks for bookings  
+- Granular role tiers (e.g., kitchen vs front of house staff)
+
